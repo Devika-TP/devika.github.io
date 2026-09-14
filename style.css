@@ -1,17 +1,73 @@
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    background: linear-gradient(130deg, #4E342E, #F5F5DC);
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+}
+
+nav {
+    background: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    color: #A0522D;
+    margin: 0 0 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(130deg, #4E342E, #F5F5DC);
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    text-align: center;
+}
+
+.right img {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #7671d4;
 }
 
 h1 {
@@ -24,17 +80,251 @@ h2 {
 }
 
 p {
-    color: #000000;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
+span {
+    color: #4f46e5;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #A0522D;
+    color: white;
+    font-weight: bold;
+}
+
+.about {
+    padding: 70px 8%;
     background: white;
+    text-align: center;
+}
+
+.about h2 {
+    color: #C19A6B;
+    font-size: 35px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* SKILLS */
+
+.skills {
+    background: #D2B48C;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.skills h2 {
+    color: #8B6F47;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill-card {
+    background: white;
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* EDUCATION */
+
+.education {
+    background: white;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.education h2 {
+    font-size: 35px;
+}
+
+.edu-card {
+    background: #D2B48C;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* CERTIFICATIONS */
+
+.certifications {
+    background: #D2B48C;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.certifications h2 {
+    color: #A0522D;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.cert-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.cert-card {
+    background: white;
+    width: 400px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cert-card h3 {
+    font-size: 22px;
+}
+
+.cert-card p {
+    font-size: 17px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #D2B48C;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #7B1E1E;
+    font-size: 35px;
+}
+
+.contact p {
+    color: white;
+}
+
+footer {
+    background: #4F5D2F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: white;
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 15px 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .about,
+    .skills,
+    .education,
+    .certifications,
+    .contact {
+        padding: 45px 20px;
+    }
+
+    .skills h2,
+    .education h2,
+    .certifications h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .skill-card {
+        width: 100%;
+        padding: 22px;
+        font-size: 20px;
+    }
+
+    .cert-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .cert-card {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .cert-card p {
+        font-size: 16px;
+    }
+
+    .edu-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact p {
+        font-size: 16px;
+        overflow-wrap: break-word;
+    }
+}    background: white;
     position: sticky;
     top: 0;
     z-index: 1000;
